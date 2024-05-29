@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 62.5%;
+  background-color: #FFEFE7;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vh;
+}
+nav p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: #7C6A0A;
+}
+nav .icons {
+  display: flex;
+  gap: 1.5rem;
+}
+nav .icons button {
+  border: none;
+  width: 3.6rem;
+  aspect-ratio: 1/1;
+  background-color: #7C6A0A;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
+nav .icons .profile {
+  -webkit-mask-image: url("../assets/svg/profile.svg");
+          mask-image: url("../assets/svg/profile.svg");
+}
+nav .icons .wishlist {
+  -webkit-mask-image: url("../assets/svg/heart.svg");
+          mask-image: url("../assets/svg/heart.svg");
+}
+nav .icons .cart {
+  -webkit-mask-image: url("../assets/svg/shopping-cart.svg");
+          mask-image: url("../assets/svg/shopping-cart.svg");
+}
+
+header {
+  width: 100vw;
+  padding: 1vh 6vw 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+}
+header .info-section {
+  width: 40%;
+  color: #7C6A0A;
+  padding-top: 5%;
+}
+header .info-section h1 {
+  padding-bottom: 40px;
+  font-size: 4.4rem;
+  font-weight: bold;
+  line-height: 5rem;
+}
+header .info-section p {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-weight: 300;
+}
+header .info-section button {
+  background: none;
+  border-style: none;
+}
+header picture {
+  width: 25vw;
+  height: auto;
+  margin-right: 10vw;
+}
+header picture img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: #fa9500;
+  width: 100%;
+  height: 10vh;
+}/*# sourceMappingURL=main.css.map */
