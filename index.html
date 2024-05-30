@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>Landing Page</title>
 </head>
+
+
 <body>
     <nav>
         <p>Eco-store</p>
         <div class="icons">
+            <button class="menu"><span class="visually-hidden">Perfil</span></button>
             <button class="profile"><span class="visually-hidden">Perfil</span></button>
             <button class="wishlist"><span class="visually-hidden">Lista de deseados</span></button>
             <button class="cart"><span class="visually-hidden">Carro de compras</span></button>
         </div>
     </nav>
+
     <main>
         <header>
+            <picture>
+                <img src="./assets/img/main-2.jpg" alt="Imagen de un colgador con útiles de aseo">
+            </picture>
+
             <section class="info-section">
                 <h1>Impacto Ecológico</h1>
                 <p>
@@ -31,16 +39,20 @@
                 </p>
                 <button>Conoce más</button>
             </section>
-            <picture>
-                <img src="./assets/img/main-2.jpg" alt="Imagen de un colgador con útiles de aseo">
-            </picture>
         </header>
+
         <section class="health-products-section">
             <h2>Cuidado de la salud</h2>
-            <article class="producto_card">
-                
-            </article>
+            <div class="health-products-galery">
+                <article class="producto_card">
+                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
+                    <img src="" alt="">
+                    <h3>Cepillo de Bambú</h3>
+                    <p>Paquete de 2 unidades</p>
+                </article>
+            </div>
         </section>
+
         <section class="decoration-productos-section">
             <h2>Decoración del hogar</h2>
         </section>
@@ -70,6 +82,7 @@
             </section>
         </article>
     </main>
+
     <footer>
         <h3>Eco-store</h3>
         <ul>

@@ -8,6 +8,9 @@ html {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 62.5%;
   background-color: #FFEFE7;
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -30,9 +33,9 @@ nav {
   padding: 0 5vh;
 }
 nav p {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
-  line-height: 2.8rem;
+  line-height: 2.5rem;
   color: #7C6A0A;
 }
 nav .icons {
@@ -41,7 +44,7 @@ nav .icons {
 }
 nav .icons button {
   border: none;
-  width: 3.6rem;
+  width: 3.2rem;
   aspect-ratio: 1/1;
   background-color: #7C6A0A;
   -webkit-mask-repeat: no-repeat;
@@ -49,28 +52,45 @@ nav .icons button {
   -webkit-mask-size: 100% 100%;
           mask-size: 100% 100%;
 }
+nav .icons .menu {
+  -webkit-mask-image: url("../assets/svg/menu.svg");
+          mask-image: url("../assets/svg/menu.svg");
+}
 nav .icons .profile {
   -webkit-mask-image: url("../assets/svg/profile.svg");
           mask-image: url("../assets/svg/profile.svg");
+  display: none;
 }
 nav .icons .wishlist {
   -webkit-mask-image: url("../assets/svg/heart.svg");
           mask-image: url("../assets/svg/heart.svg");
+  display: none;
 }
 nav .icons .cart {
   -webkit-mask-image: url("../assets/svg/shopping-cart.svg");
           mask-image: url("../assets/svg/shopping-cart.svg");
+  display: none;
 }
 
 header {
   width: 100vw;
   padding: 1vh 6vw 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-content: stretch;
 }
+header picture {
+  width: 25vw;
+  height: auto;
+  margin-right: 10vw;
+}
+header picture img {
+  width: 100%;
+  border-radius: 20px;
+}
 header .info-section {
-  width: 40%;
+  width: 40vw;
   color: #7C6A0A;
   padding-top: 5%;
   display: flex;
@@ -84,7 +104,7 @@ header .info-section h1 {
 }
 header .info-section p {
   font-size: 1.6rem;
-  line-height: 2.8rem;
+  line-height: 2.5rem;
   font-weight: 500;
 }
 header .info-section button {
@@ -96,14 +116,22 @@ header .info-section button {
   border-style: none;
   border-radius: 35px;
 }
-header picture {
-  width: 25vw;
+
+main > section {
+  width: 95vw;
   height: auto;
-  margin-right: 10vw;
+  margin: 30px auto;
 }
-header picture img {
+main > section h2 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 4rem;
+  color: #7C6A0A;
+}
+
+.health-products-section .health-products-galery {
   width: 100%;
-  border-radius: 20px;
+  margin-top: 6vh;
 }
 
 footer {
