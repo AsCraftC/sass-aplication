@@ -1,1 +1,15 @@
 /* Archivo que implementa los modificadores de BEM */
+.producto-card{
+    &--deco{
+        background-color: var(--tertiary-color);
+    }
+    &__favorite-button--deco{
+        background-color: white;
+    }
+    &__title--deco{
+        color: white;
+    }
+    &__description--deco{
+        color: white;
+    }
+}

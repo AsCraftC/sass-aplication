@@ -5,6 +5,7 @@
 body{
     padding: 0 7vw;
 }
+/*Permite agregar descripción a los botones con icono para lectores de pantalla*/
 .visually-hidden:not(:focus):not(:active) {
     width: 1px;
     height: 1px;
@@ -67,14 +68,14 @@ body{
         border-radius: 2rem;
     }
 }
-.health-products-section{
+.products-section{
     margin: base.$font-size-big 0;
 
     &__title{
         @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big);
     }
 }
-.products-galery{
+.products-galery{ 
     padding: base.$font-size-medium;
     display: flex;
     gap: base.$font-size-medium;
@@ -110,3 +111,13 @@ body{
         @include layout.fontSetting($size: .8rem, $height: 1.2rem);
     }
 }
+
+
+/*
+footer{
+    $background: #fa9500;
+    background-color: $background;
+    width: 100%;
+    height: 10vh;
+}
+*/

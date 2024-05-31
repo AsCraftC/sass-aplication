@@ -112,6 +112,7 @@ body {
   padding: 0 7vw;
 }
 
+/*Permite agregar descripción a los botones con icono para lectores de pantalla*/
 .visually-hidden:not(:focus):not(:active) {
   width: 1px;
   height: 1px;
@@ -232,10 +233,10 @@ body {
   border-radius: 2rem;
 }
 
-.health-products-section {
+.products-section {
   margin: 2.2rem 0;
 }
-.health-products-section__title {
+.products-section__title {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 2.8rem;
@@ -301,4 +302,17 @@ footer{
     width: 100%;
     height: 10vh;
 }
-*//*# sourceMappingURL=styles.css.map */
+*/
+/* Archivo que implementa los modificadores de BEM */
+.producto-card--deco {
+  background-color: var(--tertiary-color);
+}
+.producto-card__favorite-button--deco {
+  background-color: white;
+}
+.producto-card__title--deco {
+  color: white;
+}
+.producto-card__description--deco {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
