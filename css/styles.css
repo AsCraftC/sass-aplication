@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* Archivo que presenta las variables iniciales y el reset del css */
+/* Tipografía */
+/* Tamaño de tipografías 1rem = 10px */
+/* Responsive breakpoints */
+:root {
+  /* Colors */
+  --primary-color:#FFEFE7; /* BG de la pagina */
+  --secondary-color:#FFDAC6;
+  --tertiary-color:#BABD8D;
+  --quaternary-color:#FA9500;
+  --primary-text-color:#7C6A0A;
+  --secondary-text-color:#E86424;
+  font-size: 62.5%;
+}
+
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover; /* opcional */
+  -o-object-position: center center;
+     object-position: center center; /* opcional */
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1.6rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--primary-text-color);
+  font-smooth: always; /* opcional */
+  -webkit-font-smoothing: antialiased; /* opcional */
+  -moz-osx-font-smoothing: grayscale; /* opcional */
+  background-color: var(--primary-color);
+}
+
+/* Archivo que guarda los mixin y funciones en caso de tenerlas */
+/* Archivo que implementa los módulos utilizando BEM */
+body {
+  padding: 0 7vw;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+.nav {
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__title {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: inherit;
+}
+
+.icons-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons-wrapper__menu {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  background-color: var(--primary-text-color);
+  -webkit-mask-image: url(../assets/svg/menu.svg);
+          mask-image: url(../assets/svg/menu.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+}
+.icons-wrapper__profile {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  background-color: var(--primary-text-color);
+  -webkit-mask-image: url(../assets/svg/profile.svg);
+          mask-image: url(../assets/svg/profile.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+  display: none;
+}
+.icons-wrapper__wishlist {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  background-color: var(--primary-text-color);
+  -webkit-mask-image: url(../assets/svg/heart.svg);
+          mask-image: url(../assets/svg/heart.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+  display: none;
+}
+.icons-wrapper__cart {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  background-color: var(--primary-text-color);
+  -webkit-mask-image: url(../assets/svg/shopping-cart.svg);
+          mask-image: url(../assets/svg/shopping-cart.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+  display: none;
+}
+
+.header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.2rem;
+}
+.header__picture {
+  border-radius: 0.7rem;
+}
+.header__title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  color: inherit;
+}
+.header__message {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: inherit;
+}
+.header__button {
+  width: 40%;
+  padding: 1.2rem 2.6rem;
+  margin: 0 auto;
+  text-align: start;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: white;
+  background-color: var(--quaternary-color);
+  border-style: none;
+  border-radius: 2rem;
+}
+
+.health-products-section {
+  margin: 2.2rem 0;
+}
+.health-products-section__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: inherit;
+}
+
+.products-galery {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+  scroll-snap-align: x proximity;
+}
+
+.producto-card {
+  position: relative;
+  min-width: 18rem;
+  max-width: 32.4rem;
+  height: 27.6rem;
+  padding: 3rem 2.4rem;
+  scroll-snap-align: start;
+  background-color: var(--secondary-color);
+  border-radius: 0.4rem;
+}
+.producto-card__favorite-button {
+  position: absolute;
+  top: 1rem;
+  right: 0.7rem;
+  width: 1.7rem;
+  aspect-ratio: 1/1;
+  background-color: var(--primary-text-color);
+  -webkit-mask-image: url(../assets/svg/heart.svg);
+          mask-image: url(../assets/svg/heart.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+}
+.producto-card__imagen {
+  width: 100%;
+  aspect-ratio: 13/16;
+  border-radius: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+.producto-card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: inherit;
+}
+.producto-card__description {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  color: inherit;
+}
+
+/*
+footer{
+    $background: #fa9500;
+    background-color: $background;
+    width: 100%;
+    height: 10vh;
+}
+*//*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,36 @@
+/* Archivo que guarda los mixin y funciones en caso de tenerlas */
+@use '_base';
+
+@mixin flex($direction  : column, 
+            $corte      : wrap,
+            $principal  : flex-start,
+            $secundario : center)
+{
+    display         : flex;
+    flex-flow       : $direction $corte;
+    justify-content : $principal;
+    align-items     : $secundario;
+}
+@mixin icon($width: 3.2rem, 
+            $color: var(--primary-text-color),
+            $URL: null)
+{
+    width           : $width;
+    aspect-ratio    : 1/1;
+    background-color: $color;
+    mask-image      : url(#{$URL});
+    mask-repeat     : no-repeat;
+    mask-size       : 100% 100%;
+    border          : none;
+
+}
+@mixin fontSetting( $size   : base.$font-size-small, 
+                    $weight : 400, 
+                    $height : base.$font-height-small, 
+                    $color  : inherit)
+{
+    font-size   : $size;
+    font-weight : $weight;
+    line-height : $height;
+    color       : $color;
+}

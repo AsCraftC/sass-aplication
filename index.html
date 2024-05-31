@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -12,69 +12,98 @@
 
 
 <body>
-    <nav>
-        <p>Eco-store</p>
-        <div class="icons">
-            <button class="menu"><span class="visually-hidden">Perfil</span></button>
-            <button class="profile"><span class="visually-hidden">Perfil</span></button>
-            <button class="wishlist"><span class="visually-hidden">Lista de deseados</span></button>
-            <button class="cart"><span class="visually-hidden">Carro de compras</span></button>
+    <nav class="nav">
+        <p class="nav__title">Eco-store</p>
+        <div class="icons-wrapper">
+            <button class="icons-wrapper__menu">
+                <span class="visually-hidden">Perfil</span>
+            </button>
+            <button class="icons-wrapper__profile">
+                <span class="visually-hidden">Perfil</span>
+            </button>
+            <button class="icons-wrapper__wishlist">
+                <span class="visually-hidden">Lista de deseados</span>
+            </button>
+            <button class="icons-wrapper__cart">
+                <span class="visually-hidden">Carro de compras</span>
+            </button>
         </div>
     </nav>
 
     <main>
-        <header>
+        <header class="header">
             <picture>
-                <img src="./assets/img/main-2.jpg" alt="Imagen de un colgador con útiles de aseo">
+                <img class="header__picture" src="./assets/img/main-2.jpg" alt="Imagen de un colgador con útiles de aseo">
             </picture>
-
-            <section class="info-section">
-                <h1>Impacto Ecológico</h1>
-                <p>
-                    Debido al impacto ambiental siendo las acciones humanas las que  modifican el ambiente, Eco-store se compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al cuidado del medio ambiente.
-                </p>
-                <button>Conoce más</button>
-            </section>
+            <h1 class="header__title">Impacto Ecológico</h1>
+            <p class="header__message">
+                Debido al impacto ambiental siendo las acciones humanas las que  modifican el ambiente, Eco-store se compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al cuidado del medio ambiente.
+            </p>
+            <button class="header__button">Conoce más</button>
         </header>
 
-        <section class="health-products-section">
-            <h2>Cuidado de la salud</h2>
+         <section class="health-products-section">
+            <h2 class="health-products-section__title">Cuidado de la salud</h2>
             <div class="products-galery">
-                <article class="producto_card">
-                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
-                    <img src="./assets/img/products/toothbrush.jpg" alt="Imagen de un cepillo de Bambú">
-                    <h3>Cepillo de Bambú</h3>
-                    <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen" 
+                            src="./assets/img/products/toothbrush.jpg" 
+                            alt="Imagen de un cepillo de Bambú">
+                    <h3 class="producto-card__title">Cepillo de Bambú</h3>
+                    <p class="producto-card__description">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
                 </article>
-                <article class="producto_card">
-                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
-                    <img src="./assets/img/products/hand-cream.jpeg" alt="Imagen de una crema de manos">
-                    <h3>Crema de manos</h3>
-                    <p>Crema hidratante con eucalipto ayuda al cuidado de la piel.</p>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/products/hand-cream.jpeg"
+                            alt="Imagen de una crema de manos">
+                    <h3 class="producto-card__title">Crema de manos</h3>
+                    <p class="producto-card__description">Crema hidratante con eucalipto ayuda al cuidado de la piel.</p>
                 </article>
-                <article class="producto_card">
-                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
-                    <img src="./assets/img/products/serum.jpg" alt="Imagen de un Serum hidratante">
-                    <h3>Serum hidratante</h3>
-                    <p>Serum hecho a base de extractos naturales y ácido hialurónico.</p>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/products/serum.jpg"
+                            alt="Imagen de un Serum hidratante">
+                    <h3 class="producto-card__title">Serum hidratante</h3>
+                    <p class="producto-card__description">Serum hecho a base de extractos naturales y ácido hialurónico.</p>
                 </article>
-                <article class="producto_card">
-                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
-                    <img src="./assets/img/products/organic-kit.jpg" alt="Imagen de un Kit de viaje">
-                    <h3>Kit de viaje</h3>
-                    <p>Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño de viaje.</p>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/products/organic-kit.jpg"
+                            alt="Imagen de un Kit de viaje">
+                    <h3 class="producto-card__title">Kit de viaje</h3>
+                    <p class="producto-card__description">Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño de viaje.</p>
                 </article>
-                <article class="producto_card">
-                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
-                    <img src="./assets/img/products/organic-soap.jpg" alt="Imagen de un Set de jabones">
-                    <h3>Set de jabones</h3>
-                    <p>Paquete de 2 unidades jabón de carbón activado con coco.</p>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/products/organic-soap.jpg"
+                            alt="Imagen de un Set de jabones">
+                    <h3 class="producto-card__title">Set de jabones</h3>
+                    <p class="producto-card__description">Paquete de 2 unidades jabón de carbón activado con coco.</p>
                 </article>
-                <article class="producto_card">
-                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
-                    <img src="./assets/img/products/guasha-kit.jpg" alt="Imagen de un Kit de skincare">
-                    <h3>Kit de skincare</h3>
-                    <p>Incluye 2 rodillos y una gua sha.</p>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/products/guasha-kit.jpg"
+                            alt="Imagen de un Kit de skincare">
+                    <h3 class="producto-card__title">Kit de skincare</h3>
+                    <p class="producto-card__description">Incluye 2 rodillos y una gua sha.</p>
                 </article>
             </div>
         </section>
@@ -82,11 +111,105 @@
         <section class="decoration-productos-section">
             <h2>Decoración del hogar</h2>
             <div class="products-galery">
-                <article class="producto_card">
-                    <button class="favorite"><span class="visually-hidden">Agregar a favoritos</span></button>
-                    <img src="./assets/img/furniture/" alt="">
-                    <h3></h3>
-                    <p></p>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
+                </article>
+                <article class="producto-card">
+                    <button class="producto-card__favorite-button">
+                        <span class="visually-hidden">Agregar a favoritos</span>
+                    </button>
+                    <img    class="producto-card__imagen"
+                            src="./assets/img/furniture/"
+                            alt="">
+                    <h3 class="producto-card__title"></h3>
+                    <p class="producto-card__description"></p>
                 </article>
             </div>
         </section>
@@ -112,11 +235,11 @@
             <section class="location">
                 <h2>Encuentranos en</h2>
                 <picture></picture>
-                <p></p>
+                <p ></p>
             </section>
         </article>
     </main>
-
+<!-- 
     <footer>
         <h3>Eco-store</h3>
         <ul>
@@ -129,6 +252,6 @@
             <img src="" alt="">
             <img src="" alt="">
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>

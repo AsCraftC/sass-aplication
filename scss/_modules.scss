@@ -1,0 +1,112 @@
+/* Archivo que implementa los módulos utilizando BEM */
+@use 'base';
+@use 'layout';
+
+body{
+    padding: 0 7vw;
+}
+.visually-hidden:not(:focus):not(:active) {
+    width: 1px;
+    height: 1px;
+    position: absolute; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    clip: rect(0 0 0 0); 
+    clip-path: inset(100%); 
+}
+.nav{
+    width: 100%;
+    height: 7vh;
+    @include layout.flex($direction : row, $principal : space-between);
+
+    &__title{
+        @include layout.fontSetting($size : base.$font-size-medium, $height : base.$font-height-medium);
+    }
+}
+.icons-wrapper{
+    @include layout.flex($direction : row, $principal : space-between);
+
+    &__menu{
+        @include layout.icon($URL: "../assets/svg/menu.svg");
+    }
+
+    &__profile{
+        @include layout.icon($URL: "../assets/svg/profile.svg");
+        display: none;
+    }
+    &__wishlist{
+        @include layout.icon($URL: "../assets/svg/heart.svg");
+        display: none;
+    }
+    &__cart{
+        @include layout.icon($URL: "../assets/svg/shopping-cart.svg");
+        display: none;
+    }
+}
+.header{
+    @include layout.flex($secundario : flex-start);
+    gap: base.$font-size-big;
+
+    &__picture{
+        border-radius: .7rem;
+    }
+    &__title{
+        @include layout.fontSetting($size : base.$font-size-big, $weight : 600, $height : base.$font-height-big);
+    }
+    &__message{
+        @include layout.fontSetting;
+    }
+    &__button{
+        width: 40%;
+        padding: 1.2rem 2.6rem;
+        margin: 0 auto;
+        text-align: start;
+        @include layout.fontSetting($weight : bold, $color : white);
+        background-color: var(--quaternary-color);
+        border-style: none;
+        border-radius: 2rem;
+    }
+}
+.health-products-section{
+    margin: base.$font-size-big 0;
+
+    &__title{
+        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big);
+    }
+}
+.products-galery{
+    padding: base.$font-size-medium;
+    display: flex;
+    gap: base.$font-size-medium;
+    overflow-x: scroll;
+    scroll-snap-align: x proximity;
+}
+.producto-card{
+    position: relative;
+    min-width: 18rem;
+    max-width: 32.4rem;
+    height: 27.6rem;
+    padding: 3rem 2.4rem;
+    scroll-snap-align: start;
+    background-color: var(--secondary-color);
+    border-radius: .4rem;
+
+    &__favorite-button{
+        position: absolute;
+        top: 1rem;
+        right: .7rem;
+        @include layout.icon($width : 1.7rem, $URL: "../assets/svg/heart.svg");
+    }
+    &__imagen{
+        width: 100%;
+        aspect-ratio: 13/16;
+        border-radius: .4rem;
+        margin-bottom: base.$font-size-small;
+    }
+    &__title{
+        @include layout.fontSetting($weight: bold);
+    }
+    &__description{
+        @include layout.fontSetting($size: .8rem, $height: 1.2rem);
+    }
+}
