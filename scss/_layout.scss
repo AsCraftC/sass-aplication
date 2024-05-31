@@ -4,12 +4,14 @@
 @mixin flex($direction  : column, 
             $corte      : wrap,
             $principal  : flex-start,
-            $secundario : center)
+            $secundario : center,
+            $gap: 0)
 {
     display         : flex;
     flex-flow       : $direction $corte;
     justify-content : $principal;
     align-items     : $secundario;
+    gap: $gap;
 }
 @mixin icon($width: 3.2rem, 
             $color: var(--primary-text-color),

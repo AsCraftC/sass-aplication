@@ -2,7 +2,7 @@
 @use 'base';
 @use 'layout';
 
-body{
+nav, main{
     padding: 0 7vw;
 }
 /*Permite agregar descripción a los botones con icono para lectores de pantalla*/
@@ -45,8 +45,7 @@ body{
     }
 }
 .header{
-    @include layout.flex($secundario : flex-start);
-    gap: base.$font-size-big;
+    @include layout.flex($secundario : flex-start, $gap: base.$font-size-big);
 
     &__picture{
         border-radius: .7rem;
@@ -111,13 +110,82 @@ body{
         @include layout.fontSetting($size: .8rem, $height: 1.2rem);
     }
 }
+.about-us-section{
+    @include layout.flex($secundario: flex-start, $gap: 6vh);
+    margin: base.$font-size-medium 0;
 
+    &__title{
+        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, inherit);
+    }
+    &__holder{
+        width: 50%;
+        margin: 0 auto;
+    }
+    &__img{
+        width: 50%;
+        margin: 0 auto;
+    }
+    &__description{
+        @include layout.fontSetting(base.$font-size-small, 500, base.$font-height-small, var(--secondary-text-color));
+        text-align: center;
+    }
+}
+.gallery{
+    @include layout.flex($secundario: flex-start, $gap: 2vh);
+    margin: base.$font-size-medium 0;
 
-/*
-footer{
+    &__title{
+        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, inherit);
+    }
+    &__img{
+        width: 99%;
+        aspect-ratio: 1/1;
+        border-radius: 1.1rem;
+    }
+}
+.location{
+    @include layout.flex($secundario: flex-start, $gap: 5vh);
+    margin: base.$font-size-medium 0;
+
+    &__title{
+        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, inherit);
+    }
+    &__img{
+        min-height: 3.3rem;
+        aspect-ratio: 11/16;
+    }
+    &__direction-name{
+        @include layout.fontSetting(base.$font-size-big, 400, base.$font-height-big, var(--secondary-text-color));
+    }
+    &__direction{
+        @include layout.fontSetting(base.$font-size-medium, 400, base.$font-height-medium, var(--secondary-text-color));
+    }
+}
+.footer{
     $background: #fa9500;
     background-color: $background;
     width: 100%;
-    height: 10vh;
+    padding: base.$font-size-medium;
+
+    &__title{
+        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, white);
+    }
+    &__li{
+        @include layout.fontSetting(base.$font-size-small, 400, base.$font-height-big, white);
+    }
+
 }
-*/
+.social-media{
+    @include layout.flex($direction: row ,$principal: flex-start, $gap: 1rem);
+    padding: base.$font-size-medium;
+
+    &__instagram-button{
+        @include layout.icon($color: white, $URL: "../assets/img/instagram-logo.png");
+    }
+    &__facebook-button{
+        @include layout.icon($color: white, $URL: "../assets/img/facebook-logo.png");
+    }
+    &__twitter-button{
+        @include layout.icon($color: white, $URL: "../assets/img/twitter-logo.png");
+    }
+}

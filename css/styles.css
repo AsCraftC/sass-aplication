@@ -108,7 +108,7 @@ body {
 
 /* Archivo que guarda los mixin y funciones en caso de tenerlas */
 /* Archivo que implementa los módulos utilizando BEM */
-body {
+nav, main {
   padding: 0 7vw;
 }
 
@@ -131,6 +131,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
 }
 .nav__title {
   font-size: 2rem;
@@ -144,6 +145,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
 }
 .icons-wrapper__menu {
   width: 3.2rem;
@@ -295,14 +297,150 @@ body {
   color: inherit;
 }
 
-/*
-footer{
-    $background: #fa9500;
-    background-color: $background;
-    width: 100%;
-    height: 10vh;
+.about-us-section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6vh;
+  margin: 2rem 0;
 }
-*/
+.about-us-section__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: inherit;
+}
+.about-us-section__holder {
+  width: 50%;
+  margin: 0 auto;
+}
+.about-us-section__img {
+  width: 50%;
+  margin: 0 auto;
+}
+.about-us-section__description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2vh;
+  margin: 2rem 0;
+}
+.gallery__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: inherit;
+}
+.gallery__img {
+  width: 99%;
+  aspect-ratio: 1/1;
+  border-radius: 1.1rem;
+}
+
+.location {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5vh;
+  margin: 2rem 0;
+}
+.location__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: inherit;
+}
+.location__img {
+  min-height: 3.3rem;
+  aspect-ratio: 11/16;
+}
+.location__direction-name {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: var(--secondary-text-color);
+}
+.location__direction {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: var(--secondary-text-color);
+}
+
+.footer {
+  background-color: #fa9500;
+  width: 100%;
+  padding: 2rem;
+}
+.footer__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: white;
+}
+.footer__li {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: white;
+}
+
+.social-media {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.social-media__instagram-button {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  -webkit-mask-image: url(../assets/img/instagram-logo.png);
+          mask-image: url(../assets/img/instagram-logo.png);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+}
+.social-media__facebook-button {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  -webkit-mask-image: url(../assets/img/facebook-logo.png);
+          mask-image: url(../assets/img/facebook-logo.png);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+}
+.social-media__twitter-button {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  -webkit-mask-image: url(../assets/img/twitter-logo.png);
+          mask-image: url(../assets/img/twitter-logo.png);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  border: none;
+}
+
 /* Archivo que implementa los modificadores de BEM */
 .producto-card--deco {
   background-color: var(--tertiary-color);
