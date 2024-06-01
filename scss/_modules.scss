@@ -77,26 +77,25 @@ nav, main{
     }
 }
 .products-galery{ 
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: initial;
     gap: base.$font-size-medium;
     overflow-x: scroll;
-    scroll-snap-align: x proximity;
 }
 .producto-card{
     position: relative;
-    min-width: layout.px_to_vw(180px);
-    max-width: layout.px_to_vw(324px);
-    height: min-content;
-    // min-height: layout.px_to_vw(276px);
-    // max-height: layout.px_to_vw(500px);
-    padding: layout.px_to_vw(30px) layout.px_to_vw(24px);
+    min-width: 147px;
+    width: layout.px_to_vw(180px);
+    padding: layout.px_to_vw(30px) layout.px_to_vw(24px) 0;
     scroll-snap-align: start;
     background-color: var(--secondary-color);
     border-radius: 3%;
 
     &__favorite-button{
         position: absolute;
-        top: layout.px_to_vw(10px);
+        top: layout.px_to_vw(7px);
         right: layout.px_to_vw(7px);
         @include layout.icon($width : layout.px_to_vw(17px), $URL: "../assets/svg/heart.svg");
     }
@@ -110,7 +109,7 @@ nav, main{
         @include layout.fontSetting($weight: bold);
     }
     &__description{
-        @include layout.fontSetting;
+        @include layout.fontSetting(min(max(.75rem , 2.3vw), 2rem));
     }
 }
 .about-us-section{

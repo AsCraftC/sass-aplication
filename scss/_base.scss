@@ -4,20 +4,22 @@ $primary-font       : 'IBM Plex Sans' , sans-serif;
 // $secondary-font     : ;
 
 /* Tamaño de tipografías 1rem = 10px */
-$font-size-small    : min(max(.9rem , 3vw), 2.5rem);        //12px en 390px
-$font-size-medium   : min(max(1.6rem , 5.1vw), 3rem);       //20px en 390px
-$font-size-big      : min(max(2.2rem , 5.6vw), 5rem);       //22px en 390px
-$font-size-h1       : min(max(2.8rem, 7.1vw), 6rem);        //28px en 390px
+$font-size-small    : min(max(.9rem , 3vw), 1.6rem);        //12px en 390px
+$font-size-medium   : min(max(1.6rem , 5.1vw), 2rem);       //20px
+$font-size-big      : min(max(2.2rem , 5.6vw), 3.3rem);     //22px
+$font-size-h1       : min(max(2.8rem, 7.1vw), 4rem);        //28px
 
-$desktop-font-size-small: 2.5rem;
-$desktop-font-size-medium: 3rem;
-$desktop-font-size-big: 5rem;
+$desktop-font-size-small    : min(max(1.6rem , 1.7vw), 2.5rem); //25px en 1440px
+$desktop-font-size-medium   : min(max(2rem, 2.1vw), 3rem);      //30px 
+$desktop-font-size-big      : min(max(3.3rem, 3.5vw, 5rem));    //50px
+$desktop-font-size-h1       : min(max(4rem, 4.2vw), 6rem);      //60px
 
 /* Responsive breakpoints */
 $min-mobile-width   : 320px;
 $min-tablet-width   : 480px;
 $min-desktop-width  : 960px;
-$max-desktop-width  : 1328px;
+$max-desktop-width  : 1440px;
+// $desktop-1080-with  : 1920px;
 
 /* Mockups target */
 $mobile-with        : 390px;
@@ -142,6 +144,7 @@ svg{
 body {
     min-height  : 100vh;
     min-width: $min-mobile-width;
+    max-width: $max-desktop-width;
     font-family : $primary-font;
     color       : var(--primary-text-color);
     font-smooth: always;/* opcional */

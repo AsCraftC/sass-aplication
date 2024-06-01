@@ -45,13 +45,13 @@
 /* $#device: "mobile"|"tablet"|"desktop" */
 @function px_to_vw($px, $device : "mobile"){
     @if ($device == "mobile") {
-        @return math.round(math.div($px, base.$mobile-with) * 100vw) ;
+        @return math.div($px, base.$mobile-with) * 100vw;
     }
     @if ($device == "tablet") {
-        @return math.round(math.div($px, base.$tablet-with) * 100vw) ;
+        @return math.div($px, base.$tablet-with) * 100vw;
     }
     @if ($device == "desktop") {
-        @return math.round(math.div($px, base.$desktop-with)* 100vw)  ;
+        @return math.div($px, base.$desktop-with)* 100vw;
     }
     @return  0;
 }

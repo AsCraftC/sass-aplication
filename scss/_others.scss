@@ -1,4 +1,4 @@
-/* Archivo que implementa los modificadores de BEM y media¿ querys */
+/* Archivo que implementa los modificadores de BEM y media query */
 @use '_base';
 @use '_layout';
 
@@ -18,7 +18,6 @@
 }
 
 @media screen and (min-width: base.$min-tablet-width) {
-
     .header__picture{ aspect-ratio: 7/9; }
     .about-us-section{
         &__holder{ @include layout.flex(row, nowrap, flex-start, flex-start); }
@@ -40,8 +39,11 @@
 }
 
 @media screen and (min-width: base.$min-desktop-width) {
+    nav, main{
+        padding: layout.px_to_vw(65px, "desktop");
+    }
     .nav{
-        height: 13.5rem;
+        height: layout.px_to_vw(135px, "desktop");
         &__title{
             @include layout.fontSizeChange(base.$desktop-font-size-medium);
         }
@@ -52,15 +54,15 @@
         }
         &__profile{ 
             display: block;
-            width: 5.1rem;
+            width: layout.px_to_vw(51px, "desktop");
         }
         &__wishlist{ 
             display: block;
-            width: 5.1rem;
+            width: layout.px_to_vw(51px, "desktop");
         }
         &__cart{ 
             display: block;
-            width: 5.1rem; 
+            width: layout.px_to_vw(51px, "desktop"); 
         }
     }
     .header{
@@ -72,7 +74,7 @@
             width: 47%;
         }
         &__title{
-            @include layout.fontSizeChange(6rem);
+            @include layout.fontSizeChange(base.$desktop-font-size-h1);
         }
         &__message{
             @include layout.fontSizeChange;
@@ -94,17 +96,16 @@
         }
     }
     .products-galery{ 
-        @include layout.flex(row, wrap, space-between, space-between);
-        overflow-x: visible;
-        scroll-snap-align: none;
+        
     }
     .producto-card{
         margin: 1rem 0;
+        padding: layout.px_to_vw(57px, "desktop") layout.px_to_vw(41px, "desktop");
+
         &__favorite-button{
-            width: 3.1rem;
-        }
-        &__imagen{
-            
+            width: layout.px_to_vw(31px, "desktop");
+            top: layout.px_to_vw(10px, "desktop");
+            right: layout.px_to_vw(10px, "desktop");
         }
         &__title{
             @include layout.fontSizeChange(base.$desktop-font-size-small);
