@@ -3,6 +3,7 @@
 /* Tipografía */
 /* Tamaño de tipografías 1rem = 10px */
 /* Responsive breakpoints */
+/* Mockups target */
 :root {
   /* Colors */
   --primary-color:#FFEFE7; /* BG de la pagina */
@@ -98,6 +99,7 @@ svg {
 
 body {
   min-height: 100vh;
+  min-width: 320px;
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--primary-text-color);
   font-smooth: always; /* opcional */
@@ -107,6 +109,7 @@ body {
 }
 
 /* Archivo que guarda los mixin y funciones en caso de tenerlas */
+/* $#device: "mobile"|"tablet"|"desktop" */
 /* Archivo que implementa los módulos utilizando BEM */
 nav, main {
   padding: 0 7vw;
@@ -126,7 +129,7 @@ nav, main {
 
 .nav {
   width: 100%;
-  height: 7vh;
+  height: 20vw;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -134,9 +137,9 @@ nav, main {
   gap: 0;
 }
 .nav__title {
-  font-size: 2rem;
+  font-size: min(max(1.6rem, 5.1vw), 3rem);
   font-weight: 400;
-  line-height: 2.5rem;
+  line-height: calc(min(max(1.6rem, 5.1vw), 3rem) * 1.5);
   color: inherit;
 }
 
@@ -145,7 +148,7 @@ nav, main {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
+  gap: 4rem;
 }
 .icons-wrapper__menu {
   width: 3.2rem;
@@ -199,75 +202,76 @@ nav, main {
   display: none;
 }
 
-.header {
+.header__holder {
+  margin-top: min(max(2.2rem, 5.6vw), 5rem);
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2.2rem;
+  gap: min(max(2.2rem, 5.6vw), 5rem);
 }
 .header__picture {
   border-radius: 0.7rem;
 }
 .header__title {
-  font-size: 2.2rem;
+  font-size: min(max(2.8rem, 7.1vw), 6rem);
   font-weight: 600;
-  line-height: 2.8rem;
+  line-height: calc(min(max(2.8rem, 7.1vw), 6rem) * 1.5);
   color: inherit;
 }
 .header__message {
-  font-size: 1.2rem;
+  font-size: min(max(0.9rem, 3vw), 2.5rem);
   font-weight: 400;
-  line-height: 1.8rem;
+  line-height: calc(min(max(0.9rem, 3vw), 2.5rem) * 1.5);
   color: inherit;
 }
 .header__button {
   width: 40%;
-  padding: 1.2rem 2.6rem;
+  padding: min(max(0.9rem, 3vw), 2.5rem) min(max(1.6rem, 5.1vw), 3rem);
   margin: 0 auto;
   text-align: start;
-  font-size: 1.2rem;
+  font-size: min(max(0.9rem, 3vw), 2.5rem);
   font-weight: bold;
-  line-height: 1.8rem;
+  line-height: calc(min(max(0.9rem, 3vw), 2.5rem) * 1.5);
   color: white;
   background-color: var(--quaternary-color);
   border-style: none;
-  border-radius: 2rem;
+  border-radius: min(max(1.6rem, 5.1vw), 3rem);
 }
 
 .products-section {
-  margin: 2.2rem 0;
+  margin: min(max(2.2rem, 5.6vw), 5rem) 0;
 }
 .products-section__title {
-  font-size: 2.2rem;
+  font-size: min(max(2.2rem, 5.6vw), 5rem);
   font-weight: 500;
-  line-height: 2.8rem;
+  line-height: calc(min(max(2.2rem, 5.6vw), 5rem) * 1.5);
   color: inherit;
 }
 
 .products-galery {
-  padding: 2rem;
   display: flex;
-  gap: 2rem;
+  gap: min(max(1.6rem, 5.1vw), 3rem);
   overflow-x: scroll;
   scroll-snap-align: x proximity;
 }
 
 .producto-card {
   position: relative;
-  min-width: 18rem;
-  max-width: 32.4rem;
-  height: 27.6rem;
-  padding: 3rem 2.4rem;
+  min-width: 46vw;
+  max-width: 83vw;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 8vw 6vw;
   scroll-snap-align: start;
   background-color: var(--secondary-color);
-  border-radius: 0.4rem;
+  border-radius: 3%;
 }
 .producto-card__favorite-button {
   position: absolute;
-  top: 1rem;
-  right: 0.7rem;
-  width: 1.7rem;
+  top: 3vw;
+  right: 2vw;
+  width: 4vw;
   aspect-ratio: 1/1;
   background-color: var(--primary-text-color);
   -webkit-mask-image: url(../assets/svg/heart.svg);
@@ -281,19 +285,19 @@ nav, main {
 .producto-card__imagen {
   width: 100%;
   aspect-ratio: 13/16;
-  border-radius: 0.4rem;
-  margin-bottom: 1.2rem;
+  border-radius: 4%;
+  margin-bottom: min(max(0.9rem, 3vw), 2.5rem);
 }
 .producto-card__title {
-  font-size: 1.2rem;
+  font-size: min(max(0.9rem, 3vw), 2.5rem);
   font-weight: bold;
-  line-height: 1.8rem;
+  line-height: calc(min(max(0.9rem, 3vw), 2.5rem) * 1.5);
   color: inherit;
 }
 .producto-card__description {
-  font-size: 0.8rem;
+  font-size: min(max(0.9rem, 3vw), 2.5rem);
   font-weight: 400;
-  line-height: 1.2rem;
+  line-height: calc(min(max(0.9rem, 3vw), 2.5rem) * 1.5);
   color: inherit;
 }
 
@@ -302,16 +306,19 @@ nav, main {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 6vh;
-  margin: 2rem 0;
+  gap: 4vh;
+  margin: min(max(1.6rem, 5.1vw), 3rem) 0;
 }
 .about-us-section__title {
-  font-size: 2.2rem;
+  font-size: min(max(2.2rem, 5.6vw), 5rem);
   font-weight: 500;
-  line-height: 2.8rem;
+  line-height: calc(min(max(2.2rem, 5.6vw), 5rem) * 1.5);
   color: inherit;
 }
 .about-us-section__holder {
+  width: 100%;
+}
+.about-us-section__card {
   width: 50%;
   margin: 0 auto;
 }
@@ -320,9 +327,9 @@ nav, main {
   margin: 0 auto;
 }
 .about-us-section__description {
-  font-size: 1.2rem;
+  font-size: min(max(0.9rem, 3vw), 2.5rem);
   font-weight: 500;
-  line-height: 1.8rem;
+  line-height: calc(min(max(0.9rem, 3vw), 2.5rem) * 1.5);
   color: var(--secondary-text-color);
   text-align: center;
 }
@@ -333,18 +340,18 @@ nav, main {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2vh;
-  margin: 2rem 0;
+  margin: min(max(1.6rem, 5.1vw), 3rem) 0;
 }
 .gallery__title {
-  font-size: 2.2rem;
+  font-size: min(max(2.2rem, 5.6vw), 5rem);
   font-weight: 500;
-  line-height: 2.8rem;
+  line-height: calc(min(max(2.2rem, 5.6vw), 5rem) * 1.5);
   color: inherit;
 }
 .gallery__img {
   width: 99%;
   aspect-ratio: 1/1;
-  border-radius: 1.1rem;
+  border-radius: 4%;
 }
 
 .location {
@@ -352,48 +359,48 @@ nav, main {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 5vh;
-  margin: 2rem 0;
+  gap: 5vw;
+  margin: min(max(1.6rem, 5.1vw), 3rem) 0;
 }
 .location__title {
-  font-size: 2.2rem;
+  font-size: min(max(2.2rem, 5.6vw), 5rem);
   font-weight: 500;
-  line-height: 2.8rem;
+  line-height: calc(min(max(2.2rem, 5.6vw), 5rem) * 1.5);
   color: inherit;
 }
 .location__img {
-  min-height: 3.3rem;
   aspect-ratio: 11/16;
 }
 .location__direction-name {
-  font-size: 2.2rem;
+  font-size: min(max(2.2rem, 5.6vw), 5rem);
   font-weight: 400;
-  line-height: 2.8rem;
+  line-height: calc(min(max(2.2rem, 5.6vw), 5rem) * 1.5);
   color: var(--secondary-text-color);
 }
 .location__direction {
-  font-size: 2rem;
+  font-size: min(max(1.6rem, 5.1vw), 3rem);
   font-weight: 400;
-  line-height: 2.5rem;
+  line-height: calc(min(max(1.6rem, 5.1vw), 3rem) * 1.5);
   color: var(--secondary-text-color);
 }
 
 .footer {
-  background-color: #fa9500;
+  background-color: var(--quaternary-color);
   width: 100%;
-  padding: 2rem;
+  padding: min(max(1.6rem, 5.1vw), 3rem);
 }
 .footer__title {
-  font-size: 2.2rem;
+  font-size: min(max(2.2rem, 5.6vw), 5rem);
   font-weight: 500;
-  line-height: 2.8rem;
+  line-height: calc(min(max(2.2rem, 5.6vw), 5rem) * 1.5);
   color: white;
 }
 .footer__li {
-  font-size: 1.2rem;
+  font-size: min(max(0.9rem, 3vw), 2.5rem);
   font-weight: 400;
-  line-height: 2.8rem;
+  line-height: calc(min(max(0.9rem, 3vw), 2.5rem) * 1.5);
   color: white;
+  margin: 3vw 0;
 }
 
 .social-media {
@@ -402,7 +409,7 @@ nav, main {
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
+  padding-top: min(max(0.9rem, 3vw), 2.5rem);
 }
 .social-media__instagram-button {
   width: 3.2rem;
@@ -441,7 +448,7 @@ nav, main {
   border: none;
 }
 
-/* Archivo que implementa los modificadores de BEM */
+/* Archivo que implementa los modificadores de BEM y media¿ querys */
 .producto-card--deco {
   background-color: var(--tertiary-color);
 }
@@ -453,4 +460,120 @@ nav, main {
 }
 .producto-card__description--deco {
   color: white;
+}
+
+@media screen and (min-width: 480px) {
+  .header__picture {
+    aspect-ratio: 7/9;
+  }
+  .about-us-section__holder {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .about-us-section__description {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .gallery {
+    flex-direction: row;
+  }
+  .gallery__title {
+    width: 100%;
+  }
+  .gallery__img-holder {
+    width: 45%;
+  }
+  .location {
+    gap: 2vh;
+  }
+  .location__img {
+    aspect-ratio: 1/1;
+  }
+}
+@media screen and (min-width: 960px) {
+  .nav {
+    height: 13.5rem;
+  }
+  .nav__title {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  .icons-wrapper__menu {
+    display: none;
+  }
+  .icons-wrapper__profile {
+    display: block;
+    width: 5.1rem;
+  }
+  .icons-wrapper__wishlist {
+    display: block;
+    width: 5.1rem;
+  }
+  .icons-wrapper__cart {
+    display: block;
+    width: 5.1rem;
+  }
+  .header {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .header__picture-holder {
+    width: 47%;
+  }
+  .header__holder {
+    width: 47%;
+  }
+  .header__title {
+    font-size: 6rem;
+    line-height: 9rem;
+  }
+  .header__message {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+  .header__button {
+    margin: 0;
+    width: 50%;
+    max-width: 26rem;
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+    border-radius: 3rem;
+  }
+  .products-section {
+    margin: 5rem 0;
+  }
+  .products-section__title {
+    font-size: 5rem;
+    line-height: 7.5rem;
+    font-weight: 400;
+  }
+  .products-galery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 0;
+    overflow-x: visible;
+    scroll-snap-align: none;
+  }
+  .producto-card {
+    margin: 1rem 0;
+  }
+  .producto-card__favorite-button {
+    width: 3.1rem;
+  }
+  .producto-card__title {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+  .producto-card__description {
+    font-size: min(max(1.6rem, 5.1vw), 3rem);
+    line-height: calc(min(max(1.6rem, 5.1vw), 3rem) * 1.5);
+  }
 }/*# sourceMappingURL=styles.css.map */

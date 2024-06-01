@@ -32,14 +32,16 @@
 
     <main>
         <header class="header">
-            <picture>
+            <picture class="header__picture-holder">
                 <img class="header__picture" src="./assets/img/main-2.jpg" alt="colgador con útiles de aseo">
             </picture>
-            <h1 class="header__title">Impacto Ecológico</h1>
-            <p class="header__message">
-                Debido al impacto ambiental siendo las acciones humanas las que  modifican el ambiente, Eco-store se compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al cuidado del medio ambiente.
-            </p>
-            <button class="header__button">Conoce más</button>
+            <section class="header__holder">
+                <h1 class="header__title">Impacto Ecológico</h1>
+                <p class="header__message">
+                    Debido al impacto ambiental siendo las acciones humanas las que  modifican el ambiente, Eco-store se compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al cuidado del medio ambiente.
+                </p>
+                <button class="header__button">Conoce más</button>
+            </section>
         </header>
 
          <section class="products-section">
@@ -207,32 +209,34 @@
         <article>
             <section class="about-us-section">
                 <h2 class="about-us-section__title">¿Por qué nosotros?</h2>
-                <div class="about-us-section__holder ">
-                    <img    class="about-us-section__img"
-                            src="./assets/img/earth.png"
-                            alt="Icono de la tierra">
-                    <p class="about-us-section__description">Compromiso con el medio ambiente garantizando el uso de materiales 100% reciclables.</p>
-                </div>
-                <div class="about-us-section__holder ">
-                    <img    class="about-us-section__img"
-                            src="./assets/img/ecology.png"
-                            alt="Icono de idea brillante">
-                    <p class="about-us-section__description">Innovando con estilo el diseño de nuestros muebles es único.</p>
+                <div class="about-us-section__holder">
+                    <div class="about-us-section__card ">
+                        <img    class="about-us-section__img"
+                                src="./assets/img/earth.png"
+                                alt="Icono de la tierra">
+                        <p class="about-us-section__description">Compromiso con el medio ambiente garantizando el uso de materiales 100% reciclables.</p>
+                    </div>
+                    <div class="about-us-section__card">
+                        <img    class="about-us-section__img"
+                                src="./assets/img/ecology.png"
+                                alt="Icono de idea brillante">
+                        <p class="about-us-section__description">Innovando con estilo el diseño de nuestros muebles es único.</p>
+                    </div>
                 </div>
             </section>
             <section class="gallery">
                 <h2 class="gallery__title">Galería de estilos</h2>
-                <picture>
+                <picture class="gallery__img-holder">
                     <img    class="gallery__img"
                             src="./assets/img/gallery-1.jpg"
                             alt="muestra de dormitorio">
                 </picture>
-                <picture>
+                <picture class="gallery__img-holder">
                     <img    class="gallery__img"
                             src="./assets/img/gallery-2.jpg"
                             alt="muestra de cocina">
                 </picture>
-                <picture>
+                <picture class="gallery__img-holder">
                     <img    class="gallery__img"
                             src="./assets/img/gallery-3.jpg"
                             alt="muestra de habitación">
@@ -254,10 +258,10 @@
     <footer class="footer">
         <h3 class="footer__title">Eco-store</h3>
         <ul>
-            <li class="footer__li"><a href="#">Careers</a></li>
-            <li class="footer__li"><a href="#">Careers</a></li>
-            <li class="footer__li"><a href="#">Careers</a></li>
-            <li class="footer__li"><a href="#">Careers</a></li>
+            <li class="footer__li"><a href="#">Preguntas frecuentes</a></li>
+            <li class="footer__li"><a href="#">Términos y condiciones</a></li>
+            <li class="footer__li"><a href="#">Políticas de reembolso</a></li>
+            <li class="footer__li"><a href="#">Políticas de privacidad</a></li>
         </ul>
         <div class="social-media">
             <button class="social-media__instagram-button">

@@ -3,7 +3,7 @@
 @use 'layout';
 
 nav, main{
-    padding: 0 7vw;
+    padding: 0 layout.px_to_vw(27px);
 }
 /*Permite agregar descripción a los botones con icono para lectores de pantalla*/
 .visually-hidden:not(:focus):not(:active) {
@@ -17,15 +17,15 @@ nav, main{
 }
 .nav{
     width: 100%;
-    height: 7vh;
+    height: layout.px_to_vw(78px);
     @include layout.flex($direction : row, $principal : space-between);
 
     &__title{
-        @include layout.fontSetting($size : base.$font-size-medium, $height : base.$font-height-medium);
+        @include layout.fontSetting(base.$font-size-medium);
     }
 }
 .icons-wrapper{
-    @include layout.flex($direction : row, $principal : space-between);
+    @include layout.flex($direction : row, $principal : space-between, $gap: 4rem);
 
     &__menu{
         @include layout.icon($URL: "../assets/svg/menu.svg");
@@ -45,37 +45,38 @@ nav, main{
     }
 }
 .header{
-    @include layout.flex($secundario : flex-start, $gap: base.$font-size-big);
-
+    &__holder{
+        margin-top: base.$font-size-big;
+        @include layout.flex($secundario : flex-start, $gap: base.$font-size-big);
+    }
     &__picture{
         border-radius: .7rem;
     }
     &__title{
-        @include layout.fontSetting($size : base.$font-size-big, $weight : 600, $height : base.$font-height-big);
+        @include layout.fontSetting(base.$font-size-h1, 600);
     }
     &__message{
         @include layout.fontSetting;
     }
     &__button{
         width: 40%;
-        padding: 1.2rem 2.6rem;
+        padding: base.$font-size-small base.$font-size-medium;
         margin: 0 auto;
         text-align: start;
         @include layout.fontSetting($weight : bold, $color : white);
         background-color: var(--quaternary-color);
         border-style: none;
-        border-radius: 2rem;
+        border-radius: base.$font-size-medium;
     }
 }
 .products-section{
     margin: base.$font-size-big 0;
 
     &__title{
-        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big);
+        @include layout.fontSetting(base.$font-size-big, 500);
     }
 }
 .products-galery{ 
-    padding: base.$font-size-medium;
     display: flex;
     gap: base.$font-size-medium;
     overflow-x: scroll;
@@ -83,41 +84,46 @@ nav, main{
 }
 .producto-card{
     position: relative;
-    min-width: 18rem;
-    max-width: 32.4rem;
-    height: 27.6rem;
-    padding: 3rem 2.4rem;
+    min-width: layout.px_to_vw(180px);
+    max-width: layout.px_to_vw(324px);
+    height: min-content;
+    // min-height: layout.px_to_vw(276px);
+    // max-height: layout.px_to_vw(500px);
+    padding: layout.px_to_vw(30px) layout.px_to_vw(24px);
     scroll-snap-align: start;
     background-color: var(--secondary-color);
-    border-radius: .4rem;
+    border-radius: 3%;
 
     &__favorite-button{
         position: absolute;
-        top: 1rem;
-        right: .7rem;
-        @include layout.icon($width : 1.7rem, $URL: "../assets/svg/heart.svg");
+        top: layout.px_to_vw(10px);
+        right: layout.px_to_vw(7px);
+        @include layout.icon($width : layout.px_to_vw(17px), $URL: "../assets/svg/heart.svg");
     }
     &__imagen{
         width: 100%;
         aspect-ratio: 13/16;
-        border-radius: .4rem;
+        border-radius: 4%;
         margin-bottom: base.$font-size-small;
     }
     &__title{
         @include layout.fontSetting($weight: bold);
     }
     &__description{
-        @include layout.fontSetting($size: .8rem, $height: 1.2rem);
+        @include layout.fontSetting;
     }
 }
 .about-us-section{
-    @include layout.flex($secundario: flex-start, $gap: 6vh);
+    @include layout.flex($secundario: flex-start, $gap: 4vh);
     margin: base.$font-size-medium 0;
 
     &__title{
-        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, inherit);
+        @include layout.fontSetting(base.$font-size-big, 500);
     }
     &__holder{
+        width: 100%;
+    }
+    &__card{
         width: 50%;
         margin: 0 auto;
     }
@@ -126,7 +132,7 @@ nav, main{
         margin: 0 auto;
     }
     &__description{
-        @include layout.fontSetting(base.$font-size-small, 500, base.$font-height-small, var(--secondary-text-color));
+        @include layout.fontSetting(base.$font-size-small, 500, var(--secondary-text-color));
         text-align: center;
     }
 }
@@ -135,49 +141,48 @@ nav, main{
     margin: base.$font-size-medium 0;
 
     &__title{
-        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, inherit);
+        @include layout.fontSetting(base.$font-size-big, 500);
     }
     &__img{
         width: 99%;
         aspect-ratio: 1/1;
-        border-radius: 1.1rem;
+        border-radius: 4%;
     }
 }
 .location{
-    @include layout.flex($secundario: flex-start, $gap: 5vh);
+    @include layout.flex($secundario: flex-start, $gap: 5vw);
     margin: base.$font-size-medium 0;
 
     &__title{
-        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, inherit);
+        @include layout.fontSetting(base.$font-size-big, 500);
     }
     &__img{
-        min-height: 3.3rem;
         aspect-ratio: 11/16;
     }
     &__direction-name{
-        @include layout.fontSetting(base.$font-size-big, 400, base.$font-height-big, var(--secondary-text-color));
+        @include layout.fontSetting(base.$font-size-big, 400, var(--secondary-text-color));
     }
     &__direction{
-        @include layout.fontSetting(base.$font-size-medium, 400, base.$font-height-medium, var(--secondary-text-color));
+        @include layout.fontSetting(base.$font-size-medium, 400, var(--secondary-text-color));
     }
 }
 .footer{
-    $background: #fa9500;
-    background-color: $background;
+    background-color: var(--quaternary-color);
     width: 100%;
     padding: base.$font-size-medium;
 
     &__title{
-        @include layout.fontSetting(base.$font-size-big, 500, base.$font-height-big, white);
+        @include layout.fontSetting(base.$font-size-big, 500, white);
     }
     &__li{
-        @include layout.fontSetting(base.$font-size-small, 400, base.$font-height-big, white);
+        @include layout.fontSetting(base.$font-size-small, 400, white);
+        margin: layout.px_to_vw(10px) 0;
     }
 
 }
 .social-media{
     @include layout.flex($direction: row ,$principal: flex-start, $gap: 1rem);
-    padding: base.$font-size-medium;
+    padding-top: base.$font-size-small;
 
     &__instagram-button{
         @include layout.icon($color: white, $URL: "../assets/img/instagram-logo.png");

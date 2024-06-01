@@ -1,5 +1,6 @@
 /* Archivo que guarda los mixin y funciones en caso de tenerlas */
 @use '_base';
+@use 'sass:math';
 
 @mixin flex($direction  : column, 
             $corte      : wrap,
@@ -28,11 +29,29 @@
 }
 @mixin fontSetting( $size   : base.$font-size-small, 
                     $weight : 400, 
-                    $height : base.$font-height-small, 
                     $color  : inherit)
 {
     font-size   : $size;
     font-weight : $weight;
-    line-height : $height;
+    line-height : calc($size * 1.5);
     color       : $color;
+}
+
+@mixin fontSizeChange($size: base.$desktop-font-size-small){
+    font-size   : $size;
+    line-height : calc($size * 1.5);
+}
+
+/* $#device: "mobile"|"tablet"|"desktop" */
+@function px_to_vw($px, $device : "mobile"){
+    @if ($device == "mobile") {
+        @return math.round(math.div($px, base.$mobile-with) * 100vw) ;
+    }
+    @if ($device == "tablet") {
+        @return math.round(math.div($px, base.$tablet-with) * 100vw) ;
+    }
+    @if ($device == "desktop") {
+        @return math.round(math.div($px, base.$desktop-with)* 100vw)  ;
+    }
+    @return  0;
 }

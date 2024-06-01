@@ -4,20 +4,25 @@ $primary-font       : 'IBM Plex Sans' , sans-serif;
 // $secondary-font     : ;
 
 /* Tamaño de tipografías 1rem = 10px */
-$font-size-small    : 1.2rem;
-$font-height-small  : 1.8rem;
+$font-size-small    : min(max(.9rem , 3vw), 2.5rem);        //12px en 390px
+$font-size-medium   : min(max(1.6rem , 5.1vw), 3rem);       //20px en 390px
+$font-size-big      : min(max(2.2rem , 5.6vw), 5rem);       //22px en 390px
+$font-size-h1       : min(max(2.8rem, 7.1vw), 6rem);        //28px en 390px
 
-$font-size-medium   : 2rem;
-$font-height-medium : 2.5rem;
-
-$font-size-big      : 2.2rem;
-$font-height-big    : 2.8rem;
+$desktop-font-size-small: 2.5rem;
+$desktop-font-size-medium: 3rem;
+$desktop-font-size-big: 5rem;
 
 /* Responsive breakpoints */
 $min-mobile-width   : 320px;
 $min-tablet-width   : 480px;
 $min-desktop-width  : 960px;
 $max-desktop-width  : 1328px;
+
+/* Mockups target */
+$mobile-with        : 390px;
+$tablet-with        : 0;
+$desktop-with       : 1440px;
 
 :root{
     /* Colors */
@@ -136,6 +141,7 @@ svg{
 }   
 body {
     min-height  : 100vh;
+    min-width: $min-mobile-width;
     font-family : $primary-font;
     color       : var(--primary-text-color);
     font-smooth: always;/* opcional */

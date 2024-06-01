@@ -1,4 +1,7 @@
-/* Archivo que implementa los modificadores de BEM */
+/* Archivo que implementa los modificadores de BEM y media¿ querys */
+@use '_base';
+@use '_layout';
+
 .producto-card{
     &--deco{
         background-color: var(--tertiary-color);
@@ -12,4 +15,110 @@
     &__description--deco{
         color: white;
     }
+}
+
+@media screen and (min-width: base.$min-tablet-width) {
+
+    .header__picture{ aspect-ratio: 7/9; }
+    .about-us-section{
+        &__holder{ @include layout.flex(row, nowrap, flex-start, flex-start); }
+        &__description{
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+    .gallery{
+        flex-direction: row;
+        &__title{ width: 100%;}
+        &__img-holder{ width: 45%; }
+    }
+    .location{
+        gap: 2vh;
+        &__img{ aspect-ratio: 1/1; }
+    }
+    
+}
+
+@media screen and (min-width: base.$min-desktop-width) {
+    .nav{
+        height: 13.5rem;
+        &__title{
+            @include layout.fontSizeChange(base.$desktop-font-size-medium);
+        }
+    }
+    .icons-wrapper{
+        &__menu{ 
+            display: none;
+        }
+        &__profile{ 
+            display: block;
+            width: 5.1rem;
+        }
+        &__wishlist{ 
+            display: block;
+            width: 5.1rem;
+        }
+        &__cart{ 
+            display: block;
+            width: 5.1rem; 
+        }
+    }
+    .header{
+        @include layout.flex(row-reverse, nowrap, space-between, flex-start);
+        &__picture-holder{
+            width: 47%;
+        }
+        &__holder{
+            width: 47%;
+        }
+        &__title{
+            @include layout.fontSizeChange(6rem);
+        }
+        &__message{
+            @include layout.fontSizeChange;
+        }
+        &__button{
+            margin: 0;
+            width: 50%;
+            max-width: 26rem;
+            @include layout.fontSizeChange;
+            border-radius: base.$desktop-font-size-medium;
+        }
+    }
+    .products-section{
+        margin: base.$desktop-font-size-big 0;
+    
+        &__title{
+            @include layout.fontSizeChange(base.$desktop-font-size-big);
+            font-weight: 400;
+        }
+    }
+    .products-galery{ 
+        @include layout.flex(row, wrap, space-between, space-between);
+        overflow-x: visible;
+        scroll-snap-align: none;
+    }
+    .producto-card{
+        margin: 1rem 0;
+        &__favorite-button{
+            width: 3.1rem;
+        }
+        &__imagen{
+            
+        }
+        &__title{
+            @include layout.fontSizeChange(base.$desktop-font-size-small);
+        }
+        &__description{
+            @include layout.fontSizeChange(base.$font-size-medium);
+        }
+    }
+
+
+
+
+
+
+
+
 }
