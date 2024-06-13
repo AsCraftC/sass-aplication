@@ -5,6 +5,10 @@
 nav, main{
     padding: 0 layout.px_to_vw(27px);
 }
+main{
+    max-width: base.$max-desktop-width;
+    margin: 0 auto;
+}
 /*Permite agregar descripción a los botones con icono para lectores de pantalla*/
 .visually-hidden:not(:focus):not(:active) {
     width: 1px;

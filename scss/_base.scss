@@ -144,8 +144,6 @@ svg{
 body {
     min-height  : 100vh;
     min-width: $min-mobile-width;
-    max-width: $max-desktop-width;
-    margin: 0 auto;
     font-family : $primary-font;
     color       : var(--primary-text-color);
     font-smooth: always;/* opcional */

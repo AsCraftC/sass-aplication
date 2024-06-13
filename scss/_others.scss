@@ -39,10 +39,11 @@
 
 @media screen and (min-width: base.$min-desktop-width) {
     nav, main{
-        padding: layout.px_to_vw(65px, "desktop");
+        padding: 0 layout.px_to_vw(65px, "desktop");
     }
     .nav{
         height: layout.px_to_vw(135px, "desktop");
+        max-height: 180px;
         &__title{
             @include layout.fontSizeChange(base.$desktop-font-size-medium);
         }
@@ -103,6 +104,7 @@
         margin: 1rem auto;
         padding: layout.px_to_vw(57px, "desktop") layout.px_to_vw(41px, "desktop");
         width: layout.px_to_vw(324px, "desktop");
+        max-width: 432px;
 
         &__favorite-button{
             width: layout.px_to_vw(31px, "desktop");

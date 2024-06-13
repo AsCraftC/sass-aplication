@@ -100,8 +100,6 @@ svg {
 body {
   min-height: 100vh;
   min-width: 320px;
-  max-width: 1920px;
-  margin: 0 auto;
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--primary-text-color);
   font-smooth: always; /* opcional */
@@ -115,6 +113,11 @@ body {
 /* Archivo que implementa los módulos utilizando BEM */
 nav, main {
   padding: 0 6.9230769231vw;
+}
+
+main {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /*Permite agregar descripción a los botones con icono para lectores de pantalla*/
@@ -497,10 +500,11 @@ nav, main {
 }
 @media screen and (min-width: 960px) {
   nav, main {
-    padding: 4.5138888889vw;
+    padding: 0 4.5138888889vw;
   }
   .nav {
     height: 9.375vw;
+    max-height: 180px;
   }
   .nav__title {
     font-size: min(max(2rem, 2.1vw), 3rem);
@@ -567,6 +571,7 @@ nav, main {
     margin: 1rem auto;
     padding: 3.9583333333vw 2.8472222222vw;
     width: 22.5vw;
+    max-width: 432px;
   }
   .producto-card__favorite-button {
     width: 2.1527777778vw;
