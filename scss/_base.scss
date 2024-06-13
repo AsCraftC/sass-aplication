@@ -18,7 +18,7 @@ $desktop-font-size-h1       : min(max(4rem, 4.2vw), 6rem);      //60px
 $min-mobile-width   : 320px;
 $min-tablet-width   : 480px;
 $min-desktop-width  : 960px;
-$max-desktop-width  : 1440px;
+$max-desktop-width  : 1920px;
 // $desktop-1080-with  : 1920px;
 
 /* Mockups target */
@@ -145,6 +145,7 @@ body {
     min-height  : 100vh;
     min-width: $min-mobile-width;
     max-width: $max-desktop-width;
+    margin: 0 auto;
     font-family : $primary-font;
     color       : var(--primary-text-color);
     font-smooth: always;/* opcional */
