@@ -1,5 +1,5 @@
 # Aplicación usando SASS
-![Imagen del proyecto](https://github.com/AsCraftC/ssas-aplication/blob?raw=true)
+![Imagen del proyecto](https://github.com/AsCraftC/ssas-aplication/blob/master/assets/Header.png?raw=true)
 
 ## Descripción 📑
 Proyecto de prueba de implementación de sass en una landing page de un e-commerce, solo se implemento maquetación de la pagina con este preprocesador con el fin de familiarizarse con el.
@@ -17,8 +17,8 @@ Este proyecto simple solo tenia la intención de crear una pagina web estática 
 ## Vista previa del proyecto
 Si quieres hechas un vistazo al proyecto, te recomiendo:
 
-![Captura del proyecto](https://github.com/AsCraftC/ssas-aplication/blob?raw=true)
-![Captura del proyecto](https://github.com/AsCraftC/ssas-aplication/blob?raw=true)
+![Captura del proyecto](https://github.com/AsCraftC/ssas-aplication/blob/master/assets/img-1.png?raw=true)
+![Captura del proyecto](https://github.com/AsCraftC/ssas-aplication/blob/master/assets/img-2.png?raw=true)
 
 ## Autor ✒️
 **Cristóbal Contreras Beltrán**
